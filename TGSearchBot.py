@@ -23,14 +23,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        """Welcome! 🎯
+        """ Welcome! 🎯
 This is TGSearch Bot.
 Type any search word (e.g. "music", "news") and I’ll show results.
 
 𝐒𝐡𝐚𝐫𝐞 𝐓𝐆𝐬𝐞𝐚𝐫𝐜𝐡 𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝟏𝟎 𝐏𝐞𝐫𝐬𝐨𝐧𝐬.
 𝐘𝐨𝐮 𝐰𝐢𝐥𝐥 𝐄𝐚𝐫𝐧 𝟐𝟎/- 𝐩𝐞𝐫 𝐫𝐞𝐟𝐞𝐫𝐫𝐚𝐥.
 𝐌𝐢𝐧𝐢𝐦𝐮𝐦 𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰𝐚𝐥 𝐚𝐦𝐨𝐮𝐧𝐭 𝐢𝐬 𝟐𝟎𝟎/-
-JOIN CHANNELS TO USE THIS BOT""",
+𝗝𝗢𝗜𝗡 𝗖𝗛𝗔𝗡𝗡𝗘𝗟𝗦 𝗧𝗢 𝗨𝗦𝗘 𝗧𝗛𝗜𝗦 𝗕𝗢𝗧""",
         reply_markup=reply_markup
     )
 
