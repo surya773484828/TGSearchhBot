@@ -7,7 +7,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 # Channels
 CHANNELS = [
-    {"text": "Channel 1", "url": "https://youtube.com/@ambarstoryuniverse"},
+    {"text": "Channel 1 (YouTube)", "url": "https://youtube.com/@ambarstoryuniverse"},
     {"text": "Channel 2", "url": "https://t.me/LootPeLootDealsOfficial"},
     {"text": "Channel 3", "url": "https://t.me/AmbarStoryUniverseOfficial"},
 ]
@@ -23,14 +23,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        "Welcome! 🎯
+        """Welcome! 🎯
 This is TGSearch Bot.
 Type any search word (e.g. "music", "news") and I’ll show results.
 
 𝐒𝐡𝐚𝐫𝐞 𝐓𝐆𝐬𝐞𝐚𝐫𝐜𝐡 𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝟏𝟎 𝐏𝐞𝐫𝐬𝐨𝐧𝐬.
 𝐘𝐨𝐮 𝐰𝐢𝐥𝐥 𝐄𝐚𝐫𝐧 𝟐𝟎/- 𝐩𝐞𝐫 𝐫𝐞𝐟𝐞𝐫𝐫𝐚𝐥.
 𝐌𝐢𝐧𝐢𝐦𝐮𝐦 𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰𝐚𝐥 𝐚𝐦𝐨𝐮𝐧𝐭 𝐢𝐬 𝟐𝟎𝟎/-
-\n JOIN CHANNELS TO USE THIS BOT",
+JOIN CHANNELS TO USE THIS BOT""",
         reply_markup=reply_markup
     )
 
@@ -41,7 +41,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if query.data == "verify":
         all_joined = True
-        # Check only Telegram channels
+        # Check only Telegram channels (skip YouTube)
         for ch in CHANNELS[1:]:
             chat_id = ch["url"].replace("https://t.me/", "@")
             try:
@@ -62,12 +62,11 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     elif query.data == "refer":
         await query.edit_message_text(
-          "(Copy This Message And Share To Refer)"
-            "📌 टेलीग्राम का सब कुछ मिलेगा सेकंड्स में!
+            """(Copy This Message And Share To Refer)
+📌 टेलीग्राम का सब कुछ मिलेगा सेकंड्स में!
 TGsearch Bot से कोई भी Story, Movie, Anime, Leacture या Course सबकुछ तुरंत ढूंढो। 😍
 💰 Refer & Earn से बढ़िया पैसे भी कमाओ। जल्दी फायदा उठाओ और दोस्तों को भी बताओ!
-👉@tgsearchingg_Bot
-\n"
+👉@tgsearchingg_Bot"""
         )
 
 # Main
