@@ -7,7 +7,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 # Channels
 CHANNELS = [
-    {"text": "Channel 1", "url": "https://youtube.com/@ambarstoryuniverse"},
+    {"text": "Channel 1", "url": "http://www.youtube.com/@ASUAiToonsHindi"},
     {"text": "Channel 2", "url": "https://t.me/LootPeLootDealsOfficial"},
     {"text": "Channel 3", "url": "https://t.me/AmbarStoryUniverseOfficial"},
 ]
